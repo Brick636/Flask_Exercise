@@ -1,6 +1,19 @@
+{% extends 'base.html' %}
 {% block content %}
 <h1>Register</h1>
 <h4>Enter Student Information below</h4>
 <!--Form to request user's name-->
-
+<form action="/addStudentOrganisation" method="POST">
+        <div class="form-group col-md-6">
+            <label for="stuName">Enter the student first and last name: </label>
+            <input type="text" class="form-control" id="stuName" name="name" placeholder="Enter Here" required>
+        </div> 
+        <br>
+        <div class="form-group col-md-6">
+            <label for="stuOrg">Enter the organisation name: </label>
+            <input type="text" class="form-control" id="stuOrg" name="organisation" placeholder="Enter Here" required>
+        </div> 
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}

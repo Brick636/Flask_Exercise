@@ -1,4 +1,12 @@
+{% extends 'base.html' %}
 {% block content %}
-<h1>Home</h1>
-
+    <h1>Home</h1>
+    <p>Enter an integer value: </p>
+    <form action="/calculate" method="POST">
+        <div class="form-group col-md-6">
+            <label for="numberId">Enter a number: </label>
+            <input type="text" class="form-control" id="numberId" name="number" placeholder="Enter Here">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div> 
+    </form>
 {% endblock %}
